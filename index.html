@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <h2>Easy Image Editor</h2>
+        <div class="wrapper off">
+            <div class="edit-sec">
+                <div class="filter-sec">
+                    <label>Filters</label>
+                    <div class="filter">
+                        <button id="brightness" class="btn active">Brightness</button>
+                        <button id="saturation" class="btn">Saturation</button>
+                        <button id="inversion" class="btn">Inversion</button>
+                        <button id="grayscale" class="btn">Grayscale</button>
+                    </div>
+                </div>
+                <div class="range-sec">
+                    <div class="filter-lable">
+                        <span id="filter-name">Brightness</span>
+                        <span id="filter-value">100%</span>
+                    </div>
+                    <input type="range" max="200" min="0" value="100">
+                </div>
+                <div class="rotate-sec">
+                    <span>Rotate & Flip</span>
+                    <div class="rotates">
+                        <button id="left" class="btn"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right" class="btn"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="horizental" class="btn"><i class="bx bx-reflect-vertical"></i></button>
+                        <button id="vertical" class="btn"><i class="bx bx-reflect-horizontal"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="image-sec">
+                <div class="image-preview">
+                    <img src="image-placeholder.svg">
+                </div>
+            </div>
+        </div>
+        <div class="control-btns">
+            <button id="reset" class="control off">RESET</button>
+            <button id="choose-image" class="control">CHOSE IMAGE</button>
+            <button id="save-image" class="control off">SAVE IMAGE</button>
+        </div>
+        <input id="file" type="file" hidden >
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
